@@ -8,17 +8,23 @@ import '../../template';
 
 
 FlowRouter.notFound = {
-
     action: function() {
-      BlazeLayout.render('layout', { main: 'notFound' });
+        BlazeLayout.render('layout', { main: 'notFound' });
     }
 };
 
 
 
 FlowRouter.route('/', {
-  name: 'landing',
-  action() {
-    BlazeLayout.render('layout', { main: 'landing' });
-  },
+    name: 'landing',
+    action() {
+        BlazeLayout.render('layout', { main: 'addEvent' });
+    },
+});
+
+FlowRouter.route('/addEvent', {
+    name: 'addEvent',
+    action() {
+        BlazeLayout.render('layout', { main: 'addEvent' });
+    },
 });

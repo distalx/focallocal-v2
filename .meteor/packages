@@ -33,3 +33,5 @@ practicalmeteor:mocha
 dispatch:mocha-phantomjs
 accounts-password
 ian:accounts-ui-bootstrap-3
+dburles:google-maps
+mdg:geolocation

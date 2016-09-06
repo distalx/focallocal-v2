@@ -1,0 +1,29 @@
+<template name="addEvent">  
+  {{> search}}
+  <div class="map-container">
+    {{#unless geolocationError}}
+      {{> googleMap name="map" options=mapOptions}}
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
+  </div>
+</template>  
+
+<template name="search">
+    <div id="search-panel" class="pull-right">
+        <div id="info">
+            <div> 
+                <label>Where is it?</label>
+                <input class="input" id="from" value="{{currentEventPosition}}"> 
+            </div>
+            <div> 
+                <label>When is it happening?</label>
+                <input class="input" id="time" value="{{currentEventTime}}"> 
+            </div>
+            <div> 
+                <label>What is happening?</label>
+                <input class="input" id="time" value="{{currentEventDescription}}"> 
+            </div>
+        </div>
+    </div>
+</template>
